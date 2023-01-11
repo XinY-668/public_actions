@@ -6,8 +6,10 @@
 
 const fetch = require('node-fetch');
 const { headers } = require('./config');
+const {sleepRandom} = require("./util");
 
 async function draw() {
+  await sleepRandom(120,60)
   // 查询今日是否有免费抽奖机会
   const today = await fetch('https://api.juejin.cn/growth_api/v1/lottery_config/get', {
     headers,

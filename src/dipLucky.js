@@ -6,10 +6,12 @@
 
 const fetch = require('node-fetch');
 const { headers } = require('./config');
+const {sleepRandom} = require("./util");
 
 const random = (max, min = 0) => Math.floor(Math.random() * (max - min + 1) + min);
 
 async function dipLucky() {
+  await sleepRandom(240,180)
   const list = await fetch('https://api.juejin.cn/growth_api/v1/lottery_history/global_big', {
     headers,
     method: 'POST',

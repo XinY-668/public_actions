@@ -5,6 +5,7 @@ const sendMail = require('./src/sendMail');
 const sendDingTalk = require('./src/sendDingTalk');
 const sendWxWork = require('./src/sendWxWork')
 const getPoint = require('./src/getPoint');
+const active = require('./src/active')
 
 const { autoGame } = require('./src/games/autoRun');
 
@@ -53,6 +54,13 @@ const { autoGame } = require('./src/games/autoRun');
   }
 
   console.log(dip_res);
+
+  let active_res;
+  try {
+    active_res = await active();
+  } catch (error) {
+    active_res = error;
+  }
 
   try {
     const html = `

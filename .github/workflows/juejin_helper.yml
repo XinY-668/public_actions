@@ -34,6 +34,7 @@ jobs:
           PASS: ${{ secrets.PASS }}
           TO: ${{ secrets.TO }}
           UID: ${{ secrets.UID }}
+          UUID: ${{ secrets.UUID }}
           DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
           DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
           WORKWX_WEBHOOK: ${{ secrets.WORKWX_WEBHOOK }}
