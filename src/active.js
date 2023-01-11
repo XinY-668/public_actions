@@ -9,7 +9,7 @@ const { headers } = require('./config');
 const {sleepRandom} = require("./util");
 
 async function active() {
-  await sleepRandom(240,180)
+  await sleepRandom(246,180)
   //获取首页文章列表
   await fetch(`https://api.juejin.cn/recommend_api/v1/article/recommend_all_feed?aid=2608&uuid=${UUID}&spider=0`, {
     headers,

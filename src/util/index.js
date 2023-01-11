@@ -16,4 +16,4 @@ function sleepRandom(max,min = 0){
   })
 }
 
-module.exports = sleepRandom
+module.exports = {sleepRandom,getRandomTime}
